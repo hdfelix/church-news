@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :newsletter do
-    title { "MyString" }
-    date { "2020-08-11 16:42:08" }
-    address { "MyString" }
+    title { "Sample Newsletter" }
+    date { DateTime.now.to_s }
+    address { "2 City Ln, Plainville, CA" }
   end
 end
