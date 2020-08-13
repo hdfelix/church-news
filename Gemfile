@@ -17,6 +17,9 @@ gem 'awesome_print'
 # Help manage secrets
 gem 'dotenv-rails'
 
+# Haml
+gem 'haml-rails', '~>2.0'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
