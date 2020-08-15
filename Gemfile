@@ -74,7 +74,9 @@ group :test do
   gem 'database_cleaner-active_record'
   gem 'rails-controller-testing'
   gem 'shoulda-matchers'
-  gem 'simplecov'
+  gem 'simplecov', require: false
+  gem 'simplecov-rcov', require: false
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
