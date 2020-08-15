@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.5.8'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -13,6 +14,8 @@ gem 'awesome_print'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+gem 'coveralls', require: false
 
 # Help manage secrets
 gem 'dotenv-rails'

@@ -1,5 +1,28 @@
 language: ruby
-rvm: 2.5
+dist: xenial
+cache: bundler
+
+rvm: 2.5.8
 before_install:
   - yes | gem update --system --force
+  - gem --version
   - gem install bundler
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+
+addons:
+  postgresql: "10"
+  apt:
+    packages:
+      - postgresql-10
+      - postgresql-client-10
+
+services:
+  - postgresql
+
+script:
+  - bundle install -jobs=3
+  - bundle exec rails db:create
+  - bundle exec rails db:migrate
+  - bundle exec rspec
