@@ -1,1 +1,19 @@
 %h1 Newsletters
+%table
+  %tr
+    %th Title
+    %th Address
+    %th Date
+
+  - @newsletters.each do |newsletter|
+    %tr
+      %td
+        = newsletter.title
+      %td
+        = newsletter.address
+      %td
+        = newsletter.date || '--'
+      %td
+        = link_to 'Show', newsletter_path(newsletter)
+
+= link_to "New", new_newsletter_path

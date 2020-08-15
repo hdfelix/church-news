@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Section do
+RSpec.describe Section do
   context 'validations' do
     it { is_expected.to validate_presence_of(:title) }
   end
